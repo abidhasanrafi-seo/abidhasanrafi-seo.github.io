@@ -1,0 +1,30 @@
+# Abid Hasan Rafi — SEO Expert Portfolio
+
+> Personal website of Abid Hasan Rafi, SEO Expert at MicroDeft and BBA student at Canadian University of Bangladesh.
+
+## About
+Abid Hasan Rafi is an SEO Expert working at MicroDeft, a leading software development and digital marketing company in Dhaka, Bangladesh. He is also a BBA student at Canadian University of Bangladesh. He helps businesses rank higher on Google with white-hat, data-driven SEO strategies.
+
+## Services
+- SEO Audit & Strategy
+- Keyword Research & Mapping
+- On-Page SEO
+- Technical SEO & Speed
+- Link Building & Off-Page SEO
+- Local SEO & Content
+
+## Skills
+On-Page SEO, Keyword Research, Off-Page SEO & Link Building, Technical SEO & Core Web Vitals, Content Strategy, Google Analytics & Search Console.
+
+## Contact
+- Website: https://abidhasanrafi-seo.github.io/
+- Facebook: https://web.facebook.com/abid.hasan.rafi.731010
+- LinkedIn: https://www.linkedin.com/in/abid-hasan-rafi-392333329/
+- Instagram: https://www.instagram.com/ab_id9630/
+
+## Location
+Dhaka, Bangladesh.
+
+## Optional
+- Sitemap: https://abidhasanrafi-seo.github.io/sitemap.xml
+- Robots: https://abidhasanrafi-seo.github.io/robots.txt

@@ -12,5 +12,8 @@ Crawl-delay: 10
 # Block non-essential paths
 Disallow: /*?*
 
+# Host
+Host: https://abidhasanrafi-seo.github.io/
+
 # Sitemaps
 Sitemap: https://abidhasanrafi-seo.github.io/sitemap.xml

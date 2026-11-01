@@ -1,0 +1,19 @@
+{
+  "name": "Abid Hasan Rafi — SEO Expert Portfolio",
+  "short_name": "Abid Rafi",
+  "description": "Personal website of Abid Hasan Rafi, SEO Expert at MicroDeft and BBA student at Canadian University of Bangladesh.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#4f46e5",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "assets/profile.jpg",
+      "sizes": "320x320",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}
