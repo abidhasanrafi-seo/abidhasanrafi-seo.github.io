@@ -276,14 +276,15 @@ h1, h2, h3, h4 { font-family: var(--display); color: var(--text); line-height: 1
   position: absolute; inset: 0; width: 100%; height: 100%;
   object-fit: cover; border-radius: 50%; border: 8px solid var(--surface-solid);
   box-shadow: var(--shadow-lg);
-  animation: floaty 7s cubic-bezier(.4, 0, .2, 1) infinite;
+  animation: floaty 8s cubic-bezier(.4, 0, .2, 1) infinite;
   will-change: transform; backface-visibility: hidden;
+  transition: transform .6s cubic-bezier(.16, 1, .3, 1);
 }
 .avatar__badge {
   position: absolute; bottom: 4%; left: 50%; transform: translateX(-50%);
   background: var(--surface-solid); color: var(--text); font-size: .8rem; font-weight: 700;
   padding: .55rem 1.1rem; border-radius: 999px; box-shadow: var(--shadow);
-  white-space: nowrap; animation: floaty 6s cubic-bezier(.4, 0, .2, 1) infinite .8s;
+  white-space: nowrap; animation: floaty 9s cubic-bezier(.4, 0, .2, 1) infinite .8s;
   border: 1px solid var(--border);
 }
 
@@ -301,7 +302,7 @@ h1, h2, h3, h4 { font-family: var(--display); color: var(--text); line-height: 1
   border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
   backdrop-filter: blur(8px);
 }
-.marquee__track { display: flex; gap: 1.8rem; width: max-content; animation: slide 15s linear infinite; font-weight: 700; letter-spacing: .06em; font-size: .85rem; text-transform: uppercase; will-change: transform; backface-visibility: hidden; }
+.marquee__track { display: flex; gap: 1.8rem; width: max-content; animation: slide 22s linear infinite; font-weight: 700; letter-spacing: .06em; font-size: .85rem; text-transform: uppercase; will-change: transform; backface-visibility: hidden; }
 .marquee__track span:nth-child(even) { color: var(--primary); }
 
 /* ---------- Sections ---------- */
@@ -732,7 +733,7 @@ h1, h2, h3, h4 { font-family: var(--display); color: var(--text); line-height: 1
 .to-top:hover { transform: translateY(-4px); }
 
 /* ---------- Reveal ---------- */
-.reveal { opacity: 0; transform: translate3d(0, 40px, 0); transition: opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1); will-change: opacity, transform; backface-visibility: hidden; }
+.reveal { opacity: 0; transform: translate3d(0, 28px, 0); transition: opacity 1.3s cubic-bezier(.16, 1, .3, 1), transform 1.3s cubic-bezier(.16, 1, .3, 1); will-change: opacity, transform; backface-visibility: hidden; }
 .reveal.visible { opacity: 1; transform: translate3d(0, 0, 0); }
 .reveal.visible { opacity: 1; transform: none; }
 
@@ -804,10 +805,10 @@ h1, h2, h3, h4 { font-family: var(--display); color: var(--text); line-height: 1
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
   .reveal { opacity: 1; transform: none; }
-  .marquee__track { animation: slide 15s linear infinite !important; }
+  .marquee__track { animation: slide 22s linear infinite !important; }
   .avatar__ring { animation: spin 10s linear infinite !important; }
-  .avatar__img { animation: floaty 7s cubic-bezier(.4, 0, .2, 1) infinite !important; }
-  .avatar__badge { animation: floaty 6s cubic-bezier(.4, 0, .2, 1) infinite .8s !important; }
+  .avatar__img { animation: floaty 8s cubic-bezier(.4, 0, .2, 1) infinite !important; }
+  .avatar__badge { animation: floaty 9s cubic-bezier(.4, 0, .2, 1) infinite .8s !important; }
   .hero__scroll span { animation: wheel 1.7s ease-in-out infinite !important; }
   .logo__mark { animation: floaty 4s ease-in-out infinite !important; }
 }

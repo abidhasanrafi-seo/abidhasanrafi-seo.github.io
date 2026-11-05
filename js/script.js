@@ -419,8 +419,8 @@
   });
 
   function loop() {
-    dx += (mx - dx) * 0.18;
-    dy += (my - dy) * 0.18;
+    dx += (mx - dx) * 0.12;
+    dy += (my - dy) * 0.12;
     dot.style.transform = "translate3d(" + (dx - 7) + "px," + (dy - 7) + "px,0)";
     requestAnimationFrame(loop);
   }
