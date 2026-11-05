@@ -180,35 +180,24 @@
   /* ---------- Footer year ---------- */
   const year = $("#year");
   if (year) year.textContent = new Date().getFullYear();
-})()
 
-/* ---------- Theme toggle ---------- */
-(function () {
-  "use strict";
-  const root = document.documentElement;
-  const btn = document.getElementById("themeToggle");
-  if (!btn) return;
-
-  const stored = localStorage.getItem("theme");
-  const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  const initial = stored || (systemDark ? "dark" : "light");
-  root.setAttribute("data-theme", initial);
-  btn.textContent = initial === "dark" ? "☀️" : "🌙";
-
-  btn.addEventListener("click", () => {
-    const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
-    root.setAttribute("data-theme", next);
-    localStorage.setItem("theme", next);
-    btn.textContent = next === "dark" ? "☀️" : "🌙";
-  });
-
-  // follow system changes if user hasn't explicitly chosen
-  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
-    if (localStorage.getItem("theme")) return;
-    const t = e.matches ? "dark" : "light";
-    root.setAttribute("data-theme", t);
-    btn.textContent = t === "dark" ? "☀️" : "🌙";
-  });
+  /* ---------- Theme toggle ---------- */
+  (function () {
+    const root = document.documentElement;
+    const btn = document.getElementById("themeToggle");
+    if (!btn) return;
+    const stored = localStorage.getItem("theme");
+    const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const initial = stored || (systemDark ? "dark" : "light");
+    root.setAttribute("data-theme", initial);
+    btn.textContent = initial === "dark" ? "Light" : "Dark";
+    btn.addEventListener("click", () => {
+      const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+      btn.textContent = next === "dark" ? "Light" : "Dark";
+    });
+  })();
 })();
 /* ============================================================
    Chatbot — Rafi's AI Assistant
