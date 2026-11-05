@@ -11,7 +11,13 @@
   <meta name="author" content="Abid Hasan Rafi">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="google-site-verification" content="MgeaceHY8XlkEoWfoE-cuvV6mOI0Iy1eFxW_aQE1mzo" />
-  <meta name="theme-color" content="#4f46e5">
+  <meta name="geo.region" content="BD-13">
+  <meta name="geo.placename" content="Dhaka">
+  <meta name="geo.position" content="23.8103;90.4125">
+  <meta name="ICBM" content="23.8103, 90.4125">
+  <meta name="theme-color" content="#4f46e5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b1020" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
 <meta name="color-scheme" content="light dark">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="language" content="English">
@@ -68,7 +74,7 @@
   <!-- ===== Styles ===== -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 
   <!-- ===== Structured Data: Person ===== -->
@@ -262,6 +268,7 @@
         <span class="logo__text">Abid Hasan <b>Rafi</b></span>
       </a>
 
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme" title="Toggle light/dark mode">🌙</button>
       <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
         <span></span><span></span><span></span>
       </button>
@@ -311,17 +318,17 @@
 
           <ul class="hero__social" aria-label="Social media profiles">
             <li>
-              <a href="https://web.facebook.com/abid.hasan.rafi.731010" target="_blank" rel="noopener noreferrer" aria-label="Abid Hasan Rafi on Facebook">
+              <a href="https://web.facebook.com/abid.hasan.rafi.731010" target="_blank" rel="noopener noreferrer me" aria-label="Abid Hasan Rafi on Facebook">
                 <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>
               </a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/abid-hasan-rafi-392333329/" target="_blank" rel="noopener noreferrer" aria-label="Abid Hasan Rafi on LinkedIn">
+              <a href="https://www.linkedin.com/in/abid-hasan-rafi-392333329/" target="_blank" rel="noopener noreferrer me" aria-label="Abid Hasan Rafi on LinkedIn">
                 <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20.4 3H3.6A.6.6 0 0 0 3 3.6v16.8a.6.6 0 0 0 .6.6h16.8a.6.6 0 0 0 .6-.6V3.6a.6.6 0 0 0-.6-.6zM8.3 18.3H5.7V9.7h2.6v8.6zM7 8.6a1.5 1.5 0 1 1 0-3.1 1.5 1.5 0 0 1 0 3.1zm11.3 9.7h-2.6v-4.2c0-1 0-2.3-1.4-2.3s-1.6 1.1-1.6 2.2v4.3H10V9.7h2.5v1.2h.1a2.8 2.8 0 0 1 2.5-1.4c2.7 0 3.2 1.8 3.2 4.1v4.7z"/></svg>
               </a>
             </li>
             <li>
-              <a href="https://www.instagram.com/ab_id9630/?hl=en" target="_blank" rel="noopener noreferrer" aria-label="Abid Hasan Rafi on Instagram">
+              <a href="https://www.instagram.com/ab_id9630/?hl=en" target="_blank" rel="noopener noreferrer me" aria-label="Abid Hasan Rafi on Instagram">
                 <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2a3.9 3.9 0 0 1-.9 1.4c-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4a3.9 3.9 0 0 1-1.4-.9 3.9 3.9 0 0 1-.9-1.4c-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.9.3-.5.2-.8.4-1.1.7-.3.3-.5.6-.7 1.1-.1.4-.3.8-.3 1.9-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.9.2.5.4.8.7 1.1.3.3.6.5 1.1.7.4.1.8.3 1.9.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.9-.3.5-.2.8-.4 1.1-.7.3-.3.5-.6.7-1.1.1-.4.3-.8.3-1.9.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.9a2.9 2.9 0 0 0-.7-1.1 2.9 2.9 0 0 0-1.1-.7c-.4-.1-.8-.3-1.9-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.1a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8zm0 8a3.1 3.1 0 1 0 0-6.3 3.1 3.1 0 0 0 0 6.3zm6.3-8.3a1.1 1.1 0 1 1-2.3 0 1.1 1.1 0 0 1 2.3 0z"/></svg>
               </a>
             </li>
