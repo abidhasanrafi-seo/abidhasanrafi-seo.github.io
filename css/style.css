@@ -788,6 +788,9 @@ h1, h2, h3, h4 { font-family: var(--display); color: var(--text); line-height: 1
   *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
   .reveal { opacity: 1; transform: none; }
   .marquee__track { animation: slide 15s linear infinite !important; }
+  .avatar__ring { animation: spin 10s linear infinite !important; }
+  .avatar__img { animation: floaty 6s ease-in-out infinite !important; }
+  .avatar__badge { animation: floaty 5s ease-in-out infinite .8s !important; }
 }
 
 @media print {
