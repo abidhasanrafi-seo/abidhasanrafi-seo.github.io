@@ -396,3 +396,47 @@
     setTimeout(() => { if (!isOpen) toggle.style.animation = "chatPulse 1.2s ease-in-out 3"; }, 4000);
   }
 })();
+/* ---------- Smooth custom cursor + hero parallax ---------- */
+(function () {
+  "use strict";
+  if (window.matchMedia("(pointer: coarse)").matches) return;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  const dot = document.createElement("div");
+  dot.className = "cursor-dot";
+  document.body.appendChild(dot);
+
+  let mx = window.innerWidth / 2, my = window.innerHeight / 2;
+  let dx = mx, dy = my;
+  window.addEventListener("mousemove", (e) => { mx = e.clientX; my = e.clientY; }, { passive: true });
+
+  const hoverSel = "a, button, .btn, .skill-card, .service, .post, .faq__item summary";
+  document.addEventListener("mouseover", (e) => {
+    if (e.target && e.target.closest && e.target.closest(hoverSel)) dot.classList.add("is-hover");
+  });
+  document.addEventListener("mouseout", (e) => {
+    if (e.target && e.target.closest && e.target.closest(hoverSel)) dot.classList.remove("is-hover");
+  });
+
+  function loop() {
+    dx += (mx - dx) * 0.18;
+    dy += (my - dy) * 0.18;
+    dot.style.transform = "translate3d(" + (dx - 7) + "px," + (dy - 7) + "px,0)";
+    requestAnimationFrame(loop);
+  }
+  requestAnimationFrame(loop);
+
+  const avatar = document.querySelector(".hero__avatar");
+  const avatarImg = document.querySelector(".avatar__img");
+  if (avatar && avatarImg) {
+    avatar.addEventListener("mousemove", (e) => {
+      const r = avatar.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width - 0.5;
+      const y = (e.clientY - r.top) / r.height - 0.5;
+      avatarImg.style.transform = "translate3d(" + (x * -18) + "px," + (y * -18) + "px,0)";
+    });
+    avatar.addEventListener("mouseleave", () => {
+      avatarImg.style.transform = "translate3d(0,0,0)";
+    });
+  }
+})();
